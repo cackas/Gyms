@@ -1,0 +1,704 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+html
+	font-size: 10px
+	line-height: 1.2rem
+	font-family: "FuturaPTMedium"
+body
+	position: relative
+	font-family: "FuturaPTMedium"
+	overflow-x: hidden
+	color: #17191A
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+.block
+	margin: 0 7.3vw
+ul
+	list-style: none
+	padding: 0
+	margin: 0
+p
+	margin: 0
+a, a:hover, a:active
+	color: $title
+	text-decoration: none
+.flex
+	display: flex
+.flex--row
+	flex-direction: row
+.flex--row-reverse
+	flex-direction: row-reverse
+.flex--column
+	flex-direction: column
+.btn
+	color: #fff
+	border-radius: .2vw
+	background-color: $accent
+	cursor: pointer
+	&:hover
+		color: #000
+		background-color: #fff
+		box-shadow: inset 0px 0px 0px 2px $accent
+.padding--block
+	padding: 2.6vw 0
+.margin--block
+	margin-bottom: 3vw
+//Custom css
+header
+	padding-top: 1.7vw
+	background-image: url('../img/headerbg.png')
+	background-size: 100% 100%
+	position: relative
+.header__top
+	padding: .88vw 7.3vw
+	justify-content: space-between
+	align-items: center
+	background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)
+	margin-bottom: 14.3vw
+.logo
+	width: 14vw
+	img
+		width: 100%
+.header-right
+	align-items: center
+.header__phone
+	font-family: "FuturaPTMedium"
+	font-size: 1.8vw	
+	color: #fff
+	margin-right: 2.6vw
+	&:hover, &:active
+		color: #fff
+.header__btn
+	padding: 1.4vw 2.1vw
+	font-size: 2vw
+	line-height: 2vw
+	cursor: pointer
+.header__bott
+	justify-content: space-between
+	flex-wrap: wrap
+.header__title
+	font-family: "FuturaPTBold"
+	align-self: flex-start
+	font-size: 3.6vw
+	line-height: 4.6vw
+	max-width: 44vw
+	text-transform: uppercase
+	color: #fff
+.header__form
+	align-self: flex-end
+	width: 40.1vw
+	border: .78vw solid #2680EB
+	padding: 1.56vw 3.9vw
+	align-items: center
+	text-align: center
+	background-color: rgba(#fff, .49)
+#header-form
+	align-items: center
+.form__title
+	font-size: 2vw
+	line-height: 2.7vw
+	color: $accent
+	margin-bottom: .41vw
+.form__descr
+	font-size: 1.8vw
+	line-height: 1.9vw
+	color: $blue
+	margin-bottom: .67vw
+.header__label
+	font-size: 1vw
+	line-height: 1.4vw
+	margin-bottom: .73vw
+	color: #000
+#header-phone
+	font-size: 2vw
+	line-height: 2vw
+	text-align: center
+	padding: 1.3vw 1.5vw 1.4vw
+	border-radius: .78vw
+	border: 1px solid $accent
+	margin-bottom: .67vw
+	background-color: rgba(#fff, .49)
+.form__btn
+	font-size: 2vw
+	line-height: 2vw
+	padding: 1.3vw 2.6vw 1.4vw 3.6vw
+	width: fit-content
+	border: none
+.block__title
+	color: #000
+	font-size: 2.6vw
+	line-height: 3.1vw
+	width: fit-content
+	margin: 0 auto
+	text-align: center
+	font-family: "FuturaPTBold"
+	text-transform: uppercase
+.decision__title
+	position: relative
+	margin-bottom: 5vw
+	padding-left: 5.8vw
+	&:before
+		content: ''
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		width: 4.3vw
+		height: 4.3vw
+		background-image: url('../img/gym.png')
+		background-size: 100% 100%
+		background-repeat: no-repeat
+.tabs
+	justify-content: space-between
+	margin-bottom: 3.1vw
+.tab
+	width: 27.9vw
+	padding: 2.6vw 3.6vw 3.6vw
+	position: relative
+	box-shadow: 0 .26vw .52vw 0 rgba(#000, .1)
+	border-radius: .52vw
+	&.active
+		box-shadow: 0 .52vw 1vw 0 rgba(#2680EB, .6)
+.tab__number
+	position: absolute
+	top: 0
+	left: 0
+	width: 4.4vw
+	img
+		width: 100%
+.tab__title
+	font-size: 1.3vw
+	line-height: 1.56vw
+	margin-bottom: 2vw
+	text-align: center
+	text-transform: uppercase
+	font-family: "FuturaPTBold"
+.tab__descr
+	font-family: "FuturaPTMedium"
+	font-size: 1vw
+	line-height: 1.56vw
+	ul
+		list-style: disc
+.tab__gallary
+	flex-wrap: wrap
+	img
+		width: 18vw
+		height: 11vw
+.tab__content
+	padding: 1vw
+	border-radius: 3vw
+	border: .26vw solid #2680EB
+	align-items: center
+	display: none
+	justify-content: space-between
+	&.active
+		display: inherit
+.tab-form__title
+	font-size: 1.8vw
+	line-height: 2.1vw
+	margin-bottom: 2.3vw
+	text-align: center
+	color: #1C284F
+.tab-form__tel
+	border: 1px solid #C3131F
+	padding: 1.3vw 0 1.4vw
+	color: #000
+	font-size: 2vw
+	line-height: 2vw
+	text-align: center
+	border-radius: .78vw
+	margin-bottom: 1.7vw
+.tab-form__btn
+	border-radius: .78vw
+	padding: 1.3vw
+	color: #fff
+	font-size: 1.8vw
+	line-height: 1.8vw
+	text-align: center
+	border: none
+	background-color: #C3131F
+#tab1
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: -1.25vw
+		left: 12vw
+		border-top: .26vw solid #2680EB
+		border-left: .26vw solid #2680EB
+		width: 2vw
+		height: 2vw
+		transform: rotate(45deg)
+		background-color: #fff
+
+#tab2
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: -1.25vw
+		left: 40vw
+		border-top: .26vw solid #2680EB
+		border-left: .26vw solid #2680EB
+		width: 2vw
+		height: 2vw
+		transform: rotate(45deg)
+		background-color: #fff
+#tab3
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: -1.25vw
+		left: 69vw
+		border-top: .26vw solid #2680EB
+		border-left: .26vw solid #2680EB
+		width: 2vw
+		height: 2vw
+		transform: rotate(45deg)
+		background-color: #fff
+.area, .type
+	margin-bottom: 4.1vw
+.cost__title
+	margin-bottom: 5vw
+.cost-form__title
+	font-family: "FuturaPTBold"
+	font-size: 1.3vw
+	line-height: 1.56vw
+	margin-bottom: 3vw
+	color: #C3131F
+	padding-left: 4.6vw
+	position: relative
+	text-transform: uppercase
+.area__title
+	&:before
+		content: ''
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		width: 3.6vw
+		height: 3.6vw
+		background-image: url(../img/area.png)
+		background-size: 100% 100%
+.type__title
+	&:before
+		content: ''
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		width: 3.6vw
+		height: 3.6vw
+		background-image: url(../img/type.png)
+		background-size: 100% 100%
+.color__title
+	&:before
+		content: ''
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		width: 3.6vw
+		height: 3.6vw
+		background-image: url(../img/color.png)
+		background-size: 100% 100%
+.area__inputs
+	justify-content: space-between
+	align-items: center
+	input
+		display: none
+		&:checked + label
+			box-shadow: 0 .52vw 1vw 0 rgba(#2680EB, .6)
+	label
+		font-size: 2vw
+		line-height: 2.6vw
+		padding: 1.1vw 1.8vw
+		box-shadow: 0 .26vw .52vw 0 rgba(#000, .07)
+.type__inputs
+	justify-content: space-between
+	align-items: center
+	input
+		display: none
+		&:checked + label .type-input__title
+			text-decoration: underline
+		&:checked + label img
+			box-shadow: 0 .52vw 1vw 0 rgba(#2680EB, .6)
+	label
+		font-size: 1.3vw
+		line-height: 1.7vw
+		width: 20.5vw
+		img
+			width: 100%
+		.type-input__title
+			color: #000
+			text-align: center
+			text-transform: uppercase
+.color__inputs
+	justify-content: space-between
+	align-items: center
+	input
+		display: none
+		&:checked + label img
+			filter: saturate(200%)
+			box-shadow: 0 .52vw 1vw 0 rgba(#2680EB, .6)
+	label
+		font-size: 1.3vw
+		line-height: 1.7vw
+		width: 20.5vw
+		img
+			filter: saturate(100%)
+.cost-form__tel
+	font-size: 2vw
+	line-height: 2vw
+	padding: 1.4vw
+	border: 1px solid #C3131F
+	border-radius: .78vw
+	width: 31.8vw
+	margin: 0 auto
+	text-align: center
+	margin-bottom: 1.3vw
+	text-transform: uppercase
+.cost-form__submit
+	font-size: 2vw
+	line-height: 2vw
+	padding: 1.4vw
+	background-color: #C3131F
+	border: none
+	color: #fff
+	border-radius: .78vw
+	width: 31.8vw
+	margin: 0 auto
+	text-align: center
+	text-transform: uppercase
+.gyms__title
+	margin-bottom: .52vw
+.gyms__mini-title
+	font-size: 2.3vw
+	line-height: 3.1vw
+	text-align: center
+	width: fit-content
+	margin: 0 auto
+	margin-bottom: 2.6vw
+.slide
+	display: block
+	position: relative
+	width: 28vw
+	height: 20vw
+	border-radius: .52vw
+	overflow: hidden
+	&:hover .slide__info
+		opacity: 1
+.slide__img
+	width: 100%
+	height: 100%
+.slick-slide
+	padding: 0 .2vw
+.slide__info
+	opacity: 0
+	transition: all .3s
+	position: absolute
+	top: 0
+	left: 0
+	color: #fff
+	width: 100%
+	height: 100%
+	padding: 3.3vw
+	background-color: rgba(#030206, .7)
+	overflow-y: scroll
+	&::-webkit-scrollbar-track
+	&::-webkit-scrollbar
+		width: 0
+	&::-webkit-scrollbar-thumb
+
+.slide-title
+	font-size: 1vw
+	line-height: 1.56vw
+	margin-bottom: 1vw
+	text-align: center
+	position: relative
+	padding-left: 3.6vw
+	text-transform: uppercase
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 2.9vw
+		height: 2.9vw
+		background-image: url(../img/inst.png)
+		background-size: 100% 100%
+		background-repeat: no-repeat
+.slide__descr
+	font-size: 1vw
+	line-height: 1.56vw
+.slick-dots li button:before
+	content: ''
+	background-color: #fff
+	width: 1.2vw
+	height: 1.15vw
+	border-radius: 50%
+	border: .26vw solid #C3131F
+	opacity: 1 !important
+.slick-dots li.slick-active button:before
+	background-color: #C3131F
+	opacify: 1
+.loan-block
+	box-shadow: 0 .52vw .78vw 0 rgba(#000, .1)
+	border-radius: 1vw
+.loan__title
+	margin-bottom: 1.5vw
+.sponsors
+	width: fit-content
+	margin: 0 auto
+	margin-bottom: 2.1vw
+.sponsor
+	width: 20.7vw	
+	height: 6.7vw
+	padding: 0 .52vw
+	box-shadow: 0 .26vw .52vw 0 rgba(#000, .07)
+	margin-right: .78vw
+	&:last-child
+		margin-right: 0
+.loan__list
+	justify-content: space-around
+	margin-bottom: 2.6vw
+.sale__title
+	font-size: 2vw
+	line-height: 2.6vw
+	margin-bottom: 1.56vw
+	text-align: center
+.sale__list
+	font-size: 1.56vw
+	line-height: 1.56vw
+	li
+		position: relative
+		margin-bottom: 1vw
+		width: 31.7vw
+		padding-left: 2vw
+		&:before
+			content: '•'
+			position: absolute
+			top: 0
+			left: 0
+			transform: translateY(-30%)
+			color: #C3131F
+			font-size: 3vw
+			line-height: 3vw
+.loan__descr
+	font-size: 1.56vw
+	line-height: 2vw
+	text-align: center
+	margin-bottom: 3.5vw
+.inputs-group
+	justify-content: space-around
+.input-group
+	position: relative
+	.rs-start
+		position: absolute
+		bottom: 12%
+		right: 90%
+		font-size: 1.3vw
+		line-height: 1.8vw
+		width: fit-content
+	.rs-end
+		position: absolute
+		bottom: 12%
+		left: 90%
+		font-size: 1.3vw
+		line-height: 1.8vw
+		width: fit-content
+	label
+		font-size: 1.8vw
+		line-height: 2.4vw
+		margin-bottom: .88vw
+	select, input
+		padding: 1.3vw 3vw
+		width: 25vw
+		text-align: center
+		border: 1px solid #C3131F
+		border-radius: .78vw
+		font-size: 1.8vw
+		line-height: 1.8vw
+		margin-bottom: 1.8vw
+		outline: none
+#budget
+	appearance: none
+	height: 1.4vw
+	border: none
+	&:focus
+		outline: none
+	&::-webkit-slider-runnable-track
+		height: .52vw
+		background-color: rgba(#000, .2)
+	&::-webkit-slider-thumb
+		position: relative
+		appearance: none
+		height: 1.4vw
+		width: 3vw
+		transform: translateY(-30%)
+		background-color: #C3131F
+		border-radius: .52vw
+.rs-label
+  position: relative
+  display: block
+  line-height: 1.8vw
+  text-align: center
+  font-size: 1.3vw
+  width: fit-content
+  transform: translateX(70%)
+.loan-form-submit
+	width: fit-content
+	text-align: center
+	border: none
+	border-radius: .52vw
+	background-color: #C3131F
+	font-size: 2vw
+	line-height: 2.4vw
+	padding: .78vw 3vw 1vw
+	color: #fff
+	margin: 0 auto
+.footer__title
+	margin-bottom: 2.4vw
+.map-wrap
+	height: 31vw
+#map, .contacts
+	width: 50%
+	height: 100%
+#map iframe
+	width: 100%
+	height: 100%
+.contacts
+	background-color: #1B1B1C
+	padding: 1.7vw 2.5vw
+	color: #fff
+	a
+		font-size: 1.8vw
+		line-height: 2.4vw
+		margin-bottom: .9vw
+		display: block
+		color: #fff
+		&:active
+			color: #fff
+.footer-btn
+	font-size: 2vw
+	line-height: 2vw
+	padding: 1.45vw
+	border-radius: 1vw
+	background-color: #C3131F
+	width: fit-content
+	text-align: center
+	margin-bottom: .9vw
+	cursor: pointer
+.shops
+	font-size: 1.2vw
+	line-height: 1.5vw
+.header__title--mobile, .footer--mobile
+	display: none
+//Popup
+.popup
+	display: none
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: 53.6vw
+	background-image: url('../img/bg.png')
+	background-size: 100% 100%
+	padding: 5.4vw 4.4vw
+.popup__title
+	font-family: "FuturaPTBold"
+	text-transform: uppercase
+	font-size: 1.8vw
+	line-height: 2.3vw
+	margin-bottom: 1.9vw
+	text-align: center
+	color: #fff
+.close
+	position: absolute
+	top: 1vw
+	right: 1vw
+	cursor: pointer
+	width: 3.5vw
+	img
+		width: 100%
+.popup__content
+	padding: 1.3vw 2.3vw
+	border-radius: 1vw
+	margin: 0 2vw
+	border: .26vw solid #C3131F
+	background-color: rgba(#fff, .81)
+.content__title
+	font-family: "FuturaPTBold"
+	font-size: 1.3vw
+	line-height: 1.7vw
+	margin-bottom: 1.7vw
+	text-align: center
+	text-transform: uppercase
+.popup-wrap
+	align-items: center
+	justify-content: space-between
+.popup-form__title
+	font-size: 1vw
+	line-height: 1.3vw
+	margin-bottom: .83vw
+#popup-form
+	margin-right: 1vw
+.popup-tel
+	font-size: 1.8vw
+	line-height: 2vw
+	text-align: center
+	padding: .8vw 0
+	border-radius: .8vw
+	border: 1px solid #1C284F
+	background-color: rgba(#fff, .81)
+	margin-bottom: .8vw
+.popup-submit
+	font-size: 1.8vw
+	line-height: 2vw
+	text-align: center
+	padding: .8vw 0
+	border-radius: .8vw
+	color: #fff
+	border: none
+	background-color: #C3131F
+.popup-img-wrap
+	width: 12.3vw
+	img
+		width: 100%
+.header--perm
+	display: none
+	position: absolute
+	width: 6.6vw
+	bottom: 2%
+	left: 50%
+	transform: translateX(-50%)
+	img
+		width: 100%
+.popup-call
+	display: none
+	position: fixed
+	background-color: #fff
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+#popup-call
+	align-items: center
+@import "media" // Always at the end

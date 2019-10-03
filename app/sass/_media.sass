@@ -1,0 +1,159 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+    .header__btn, .header__form, .decision-block, .loan-block, .gyms-block, footer, .block__title
+        display: none
+    .block
+        margin: 0 10.2vw
+    .padding--block
+        padding: 4.1vw 0
+    .header__top
+        padding: 1vw 10.2vw
+        margin-bottom: 4.4vw
+    .header__phone
+        font-size: 5vw
+        line-height: 6.6vw
+        margin-right: 0
+    .header__top
+        background: none
+    .logo
+        width: 31.9vw
+    .header__title
+        max-width: 62vw
+        margin: 0 auto
+        text-align: center
+        font-size: 5vw
+        line-height: 5.5vw
+        margin-bottom: 1vw
+    .header__title--mobile
+        display: inherit
+        max-width: 83.3vw
+        margin: 0 auto
+        text-align: center
+        font-size: 5vw
+        line-height: 5.5vw
+        color: #fff
+        margin-bottom: 9.1vw
+    .cost-form__title
+        font-size: 5vw
+        line-height: 6.6vw        
+        margin: 0 auto
+        margin-bottom: 5.5vw
+        padding-left: 12vw
+    .area__title:before, .type__title:before, .color__title:before
+        width: 8.8vw
+        height: 8.8vw
+    .area, .type
+        margin-bottom: 4.1vw
+    .area__inputs
+        flex-wrap: wrap
+        label
+            font-size: 5vw
+            line-height: 7.2vw
+            width: 38.3vw
+            text-align: center
+            border-radius: 1.3vw
+            margin-bottom: 2.7vw
+    .type__inputs
+        flex-wrap: wrap
+        label
+            width: 38.3vw
+            margin-bottom: 4.1vw
+            border-radius: 1.3vw
+            .type-input__title
+                font-size: 2.7vw
+                line-height: 3.8vw
+    .cost-form__tel, .cost-form__submit
+        font-size: 2.5vw
+        line-height: 3.3vw
+        width: 100%
+        padding: 3.6vw 0
+        border-radius: 1.3vw
+    .footer--mobile
+        display: inherit
+        text-align: center
+        font-size: 5vw
+        line-height: 6.6vw
+        margin-bottom: 1.1vw
+        padding: 0 0 6.9vw
+    .footer-mobile__title
+        color: #000
+        text-transform: uppercase
+        font-family: "FuturaPTBold"    
+    .tel-perm
+        font-size: 5vw
+        line-height: 6.6vw
+        margin-bottom: 1.1vw
+        font-family: "FuturaPTLight"
+    .footer--mobile
+        a
+            font-family: "FuturaPTMedium"
+    //Popup
+    .popup
+        width: 79.4vw
+        padding: 8vw 9vw
+    .popup__title
+        font-size: 2.7vw
+        line-height: 4.1vw
+        margin-bottom: 2.2vw
+    .close
+        top: 2vw
+        right: 2vw
+        width: 5.2vw
+    .popup__content
+        padding: 2.5vw
+        border-radius: 2vw
+        margin: 0 2vw
+        border: 1.3vw solid #C3131F
+    .content__title
+        font-size: 2.7vw
+        line-height: 3vw
+        margin-bottom: 1.3vw
+    .popup-form__title
+        font-size: 1.6vw
+        line-height: 2.2vw
+        margin-bottom: 1.3vw
+    #popup-form
+        margin-right: 1.3vw
+    .popup-tel
+        font-size: 2.5vw
+        line-height: 3.3vw
+        padding: 1.3vw 0
+        border-radius: 1.3vw
+        margin-bottom: 1.3vw
+    .popup-submit
+        font-size: 2.5vw
+        line-height: 3.3vw
+        padding: 1.3vw 0
+        border-radius: 1.3vw
+    .popup-img-wrap
+        width: 18.3vw
+    .header--perm
+        display: inherit
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
